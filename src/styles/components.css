@@ -1,0 +1,188 @@
+@import './variables.css';
+
+/* Doodle Panel - Base style for windows and cards */
+.doodle-panel {
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow);
+  background: var(--color-bg-paper);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+.doodle-panel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Panel Header */
+.doodle-panel--header {
+  border-bottom: var(--stroke-width) solid var(--color-ink);
+  padding: 8px 12px;
+  background: var(--color-blue-header);
+  border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-ink);
+}
+
+.doodle-panel--header-yellow {
+  background: var(--color-yellow);
+}
+
+.doodle-panel--header-orange {
+  background: var(--color-orange);
+}
+
+/* Doodle Button */
+.doodle-button {
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-round);
+  padding: 6px 16px;
+  background: var(--color-yellow);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  font-size: 14px;
+  color: var(--color-ink);
+  font-family: inherit;
+}
+
+.doodle-button:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.doodle-button:active:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.doodle-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.doodle-button--blue {
+  background: var(--color-blue-header);
+  color: white;
+}
+
+.doodle-button--orange {
+  background: var(--color-orange);
+}
+
+.doodle-button--pink {
+  background: var(--color-pink);
+}
+
+/* Doodle Input */
+.doodle-input {
+  width: 100%;
+  padding: 8px 40px 8px 12px;
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-small);
+  background: white;
+  color: var(--color-ink);
+  font-size: 13px;
+  font-family: inherit;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  box-sizing: border-box;
+}
+
+.doodle-input:focus {
+  outline: none;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.doodle-input::placeholder {
+  color: var(--color-ink-soft);
+  opacity: 0.6;
+}
+
+/* Doodle Card */
+.doodle-card {
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow);
+  background: var(--color-bg-paper);
+  padding: 12px;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+.doodle-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Folder style */
+.doodle-folder {
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow);
+  background: var(--color-yellow);
+  padding: 10px 14px;
+  position: relative;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+  cursor: pointer;
+}
+
+.doodle-folder::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  right: 8px;
+  height: 8px;
+  border: var(--stroke-width) solid var(--color-ink);
+  border-bottom: none;
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  background: #E9C363;
+}
+
+.doodle-folder:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.doodle-folder--orange {
+  background: var(--color-orange);
+}
+
+.doodle-folder--blue {
+  background: var(--color-blue);
+}
+
+.doodle-folder--pink {
+  background: var(--color-pink);
+}
+
+/* Progress Bar */
+.doodle-progress {
+  width: 100%;
+  height: 8px;
+  background: #E8E0D2;
+  border: var(--stroke-width) solid var(--color-ink);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+  position: relative;
+}
+
+.doodle-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--color-orange);
+  border-radius: var(--radius-small);
+  transition: width 0.3s ease-out;
+}
+

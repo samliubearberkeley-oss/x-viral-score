@@ -1,0 +1,35 @@
+:root {
+  /* Base "ink" and neutral */
+  --color-ink: #3A3A3A;
+  --color-ink-soft: #555555;
+  --color-bg-paper: #FFFDF7;
+  --color-grid-line: #E8E0D2;
+
+  /* Pastel fills */
+  --color-yellow: #F7D488;
+  --color-orange: #FF9C5F;
+  --color-pink: #F7A8B8;
+  --color-pink-deep: #F2798D;
+  --color-blue: #8FD3F4;
+  --color-blue-header: #6CAFE2;
+  --color-mint: #A7E8BD;
+  --color-cream: #FFEFD4;
+
+  /* Status/accent */
+  --color-error: #F1675C;
+  --color-success: #90D76A;
+  --color-play: #FF944A;
+  --color-pause: #FFCC73;
+
+  /* Shadow / stroke */
+  --stroke-width: 3px;
+  --shadow: 6px 6px 0px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 8px 8px 0px rgba(0, 0, 0, 0.2);
+
+  /* Border radius */
+  --radius-small: 8px;
+  --radius-medium: 10px;
+  --radius-large: 14px;
+  --radius-round: 999px;
+}
+
